@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.png");
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/sky.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
 }
 
 /* dark mode looking scrollbar */
@@ -36,6 +38,7 @@ body {
 }
 
 @keyframes shake {
+
 	10%,
 	90% {
 		transform: translate3d(-1px, 0, 0);
@@ -56,4 +59,22 @@ body {
 	60% {
 		transform: translate3d(4px, 0, 0);
 	}
+}
+
+/* Custom Scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+	width: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+	background: #93c5fd;
+	border-radius: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+	background: #60a5fa;
 }
