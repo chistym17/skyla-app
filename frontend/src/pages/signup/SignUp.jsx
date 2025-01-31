@@ -9,7 +9,6 @@ const SignUp = () => {
 		fullName: "",
 		username: "",
 		password: "",
-		confirmPassword: "",
 		gender: "",
 	});
 
@@ -25,13 +24,13 @@ const SignUp = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-[450px] mx-auto'>
-			<div className='w-full p-8 rounded-xl shadow-xl bg-sky-100 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70'>
-				<h1 className='text-4xl font-semibold text-center text-sky-950 mb-8'>
+		<div className='flex flex-col items-center justify-center min-w-[400px] mx-auto'>
+			<div className='w-full p-6 rounded-xl shadow-xl bg-sky-100 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-70'>
+				<h1 className='text-4xl font-semibold text-center text-sky-950 mb-6'>
 					Join <span className='text-sky-600'>Skyla</span>
 				</h1>
 
-				<form onSubmit={handleSubmit} className="space-y-6">
+				<form onSubmit={handleSubmit} className="space-y-4">
 					<div>
 						<label className='label p-2'>
 							<span className='text-base label-text text-sky-900 font-semibold flex items-center gap-2'>
@@ -83,22 +82,6 @@ const SignUp = () => {
 					<div>
 						<label className='label'>
 							<span className='text-base label-text text-sky-900 font-semibold flex items-center gap-2'>
-								<FaLock className="text-sky-700" />
-								Confirm Password
-							</span>
-						</label>
-						<input
-							type='password'
-							placeholder='Confirm Password'
-							className='w-full input input-bordered h-12 bg-white/70 border-sky-200 focus:border-sky-400 focus:outline-none hover:border-sky-300 transition-colors'
-							value={inputs.confirmPassword}
-							onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })}
-						/>
-					</div>
-
-					<div>
-						<label className='label'>
-							<span className='text-base label-text text-sky-900 font-semibold flex items-center gap-2'>
 								<FaTransgender className="text-sky-700" />
 								Gender
 							</span>
@@ -108,14 +91,14 @@ const SignUp = () => {
 
 					<Link
 						to={"/login"}
-						className='text-sm text-sky-700 hover:underline hover:text-sky-800 mt-2 inline-block font-medium'
+						className='text-sm text-sky-700 hover:underline hover:text-sky-800 mt-1 inline-block font-medium'
 					>
 						Already have an account?
 					</Link>
 
 					<div>
 						<button 
-							className='btn btn-block h-12 mt-2 bg-sky-600 hover:bg-sky-700 text-white border-none text-base shadow-lg hover:shadow-xl transition-all duration-200' 
+							className='btn btn-block h-12 bg-sky-600 hover:bg-sky-700 text-white border-none text-base shadow-lg hover:shadow-xl transition-all duration-200' 
 							disabled={loading}
 						>
 							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}

@@ -32,8 +32,6 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
 							/>
 						</div>
 					</div>
-					<div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white
-						${isOnline ? 'bg-green-500' : 'bg-gray-400'}`} />
 				</div>
 
 				<div className="flex-1 flex flex-col min-w-0">
@@ -43,9 +41,6 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
 						</p>
 						<span className="text-lg">{emoji}</span>
 					</div>
-					{isOnline && (
-						<p className="text-xs text-sky-500">Online</p>
-					)}
 				</div>
 			</div>
 
