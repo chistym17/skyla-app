@@ -32,7 +32,7 @@ const Sidebar = () => {
 					<div className="w-full border-t border-sky-200/50"></div>
 				</div>
 				<div className="relative flex justify-center">
-					<span className="bg-white/60 px-4 text-sm text-sky-600 rounded-full backdrop-blur-sm my-3">
+					<span className="bg-white/60 px-4 text-sm text-sky-600 rounded-full backdrop-blur-sm mt-4">
 						Your Conversations
 					</span>
 				</div>
